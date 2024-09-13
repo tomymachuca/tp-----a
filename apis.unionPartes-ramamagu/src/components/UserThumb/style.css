@@ -1,0 +1,18 @@
+.user-thumb {
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 100px;
+  position: relative;
+}
+
+.user-thumb.size-1-s {
+  background-image: url(../../../static/img/size-s.png);
+  height: 24px;
+  width: 24px;
+}
+
+.user-thumb.size-1-m {
+  background-image: url(../../../static/img/size-m.png);
+  height: 48px;
+  width: 48px;
+}

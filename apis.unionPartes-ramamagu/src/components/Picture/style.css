@@ -1,0 +1,7 @@
+.picture {
+  background-image: url(../../../static/img/picture-6.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 256px;
+  width: 456px;
+}

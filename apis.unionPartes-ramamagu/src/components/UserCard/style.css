@@ -1,0 +1,131 @@
+.user-card {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.user-card .details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.user-card .category {
+  align-self: stretch;
+  color: var(--blue-gray900);
+  margin-top: -1px;
+  position: relative;
+}
+
+.user-card .div {
+  align-self: stretch;
+  color: var(--blue-gray600);
+  position: relative;
+}
+
+.user-card .category-2 {
+  align-self: stretch;
+  color: var(--blue-gray900);
+  font-family: var(--body-s-font-family);
+  font-size: var(--body-s-font-size);
+  font-style: var(--body-s-font-style);
+  font-weight: var(--body-s-font-weight);
+  letter-spacing: var(--body-s-letter-spacing);
+  line-height: var(--body-s-line-height);
+  margin-top: -1px;
+  position: relative;
+}
+
+.user-card.vertical {
+  flex-direction: column;
+}
+
+.user-card.horizontal {
+  width: 368px;
+}
+
+.user-card.size-2-m {
+  gap: 8px;
+}
+
+.user-card.size-2-l {
+  gap: 16px;
+}
+
+.user-card.horizontal.size-2-s {
+  gap: 8px;
+}
+
+.user-card.vertical .details {
+  align-items: center;
+  align-self: stretch;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.user-card.horizontal .details {
+  align-items: flex-start;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.user-card.vertical .category {
+  text-align: center;
+}
+
+.user-card.size-2-m .category {
+  font-family: var(--body-m-font-family);
+  font-size: var(--body-m-font-size);
+  font-style: var(--body-m-font-style);
+  font-weight: var(--body-m-font-weight);
+  letter-spacing: var(--body-m-letter-spacing);
+  line-height: var(--body-m-line-height);
+}
+
+.user-card.size-2-l .category {
+  font-family: var(--body-l-font-family);
+  font-size: var(--body-l-font-size);
+  font-style: var(--body-l-font-style);
+  font-weight: var(--body-l-font-weight);
+  letter-spacing: var(--body-l-letter-spacing);
+  line-height: var(--body-l-line-height);
+}
+
+.user-card.size-2-s .category {
+  font-family: var(--body-s-font-family);
+  font-size: var(--body-s-font-size);
+  font-style: var(--body-s-font-style);
+  font-weight: var(--body-s-font-weight);
+  letter-spacing: var(--body-s-letter-spacing);
+  line-height: var(--body-s-line-height);
+}
+
+.user-card.vertical .div {
+  text-align: center;
+}
+
+.user-card.size-2-m .div {
+  font-family: var(--body-s-font-family);
+  font-size: var(--body-s-font-size);
+  font-style: var(--body-s-font-style);
+  font-weight: var(--body-s-font-weight);
+  letter-spacing: var(--body-s-letter-spacing);
+  line-height: var(--body-s-line-height);
+}
+
+.user-card.size-2-l .div {
+  font-family: var(--body-m-font-family);
+  font-size: var(--body-m-font-size);
+  font-style: var(--body-m-font-style);
+  font-weight: var(--body-m-font-weight);
+  letter-spacing: var(--body-m-letter-spacing);
+  line-height: var(--body-m-line-height);
+}
+
+.user-card.size-2-s .div {
+  font-family: "Roboto", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16.8px;
+}

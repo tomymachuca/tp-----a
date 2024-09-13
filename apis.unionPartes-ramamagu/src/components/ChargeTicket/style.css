@@ -1,0 +1,364 @@
+.ChargeTicket {
+    align-items: center;
+    background-color: var(--blue-gray900);
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ajusta la altura para ocupar toda la pantalla */
+    width: 100vw; /* Ajusta el ancho para ocupar toda la pantalla */
+    position: relative;
+    margin: 0; /* Elimina cualquier margen que pueda afectar el tamaño */
+    padding: 0; /* Elimina el padding para maximizar el espacio */
+    box-sizing: border-box; /* Asegura que el padding no cambie las dimensiones */
+}
+  /* Asegúrate de que la clase se aplica al contenedor adecuado */
+.ChargeTicket .header {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 202px;
+    padding: 24px 80px;
+    position: relative;
+    width: 100%;
+     /* Añade un color de fondo para ver los cambios fácilmente */
+}
+  
+.ChargeTicket .left {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 24px;
+    position: relative;
+  }
+  
+  .ChargeTicket .text-wrapper-2 {
+    color: var(--white);
+    font-family: var(--heading-5-font-family);
+    font-size: var(--heading-5-font-size);
+    font-style: var(--heading-5-font-style);
+    font-weight: var(--heading-5-font-weight);
+    letter-spacing: var(--heading-5-letter-spacing);
+    line-height: var(--heading-5-line-height);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .ChargeTicket .div-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .ChargeTicket .menu-item {
+    align-items: center;
+    align-self: stretch;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    padding: 12px 8px;
+    position: relative;
+  }
+  
+  .ChargeTicket .text-wrapper-3 {
+    color: var(--white);
+    font-family: var(--button-m-font-family);
+    font-size: var(--button-m-font-size);
+    font-style: var(--button-m-font-style);
+    font-weight: var(--button-m-font-weight);
+    letter-spacing: var(--button-m-letter-spacing);
+    line-height: var(--button-m-line-height);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .ChargeTicket .buttons-group {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 16px;
+    justify-content: flex-end;
+    position: relative;
+  }
+  
+  .ChargeTicket .text-container-wrapper {
+    all: unset;
+    align-items: center;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    margin-left: -14px;
+    padding: 12px 8px;
+    position: relative;
+  }
+  
+  .ChargeTicket .button-text-wrapper {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    padding: 0px 16px;
+    position: relative;
+  }
+  
+  .ChargeTicket .div-wrapper {
+    all: unset;
+    align-items: center;
+    background-color: var(--blue-gray700);
+    border: 1px solid;
+    border-color: var(--blue-gray600);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    padding: 12px;
+    position: relative;
+  }
+  
+  .ChargeTicket .button-text-2 {
+    color: #ffffff;
+    font-family: var(--button-m-font-family);
+    font-size: var(--button-m-font-size);
+    font-style: var(--button-m-font-style);
+    font-weight: var(--button-m-font-weight);
+    letter-spacing: var(--button-m-letter-spacing);
+    line-height: var(--button-m-line-height);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .ChargeTicket .section {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 80px;
+    padding: 80px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ChargeTicket .section-text {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ChargeTicket .top {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ChargeTicket .caption {
+    align-self: stretch;
+    color: var(--indigo-400);
+    font-family: var(--subtitle-XL-font-family);
+    font-size: var(--subtitle-XL-font-size);
+    font-style: var(--subtitle-XL-font-style);
+    font-weight: var(--subtitle-XL-font-weight);
+    letter-spacing: var(--subtitle-XL-letter-spacing);
+    line-height: var(--subtitle-XL-line-height);
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .ChargeTicket .main-headline {
+    align-self: stretch;
+    color: var(--white);
+    font-family: var(--heading-1-m-font-family);
+    font-size: var(--heading-1-m-font-size);
+    font-style: var(--heading-1-m-font-style);
+    font-weight: var(--heading-1-m-font-weight);
+    letter-spacing: var(--heading-1-m-letter-spacing);
+    line-height: var(--heading-1-m-line-height);
+    position: relative;
+    text-align: center;
+  }
+  
+  .ChargeTicket .paragraph {
+    align-self: stretch;
+    color: var(--blue-gray300);
+    font-family: var(--body-l-font-family);
+    font-size: var(--body-l-font-size);
+    font-style: var(--body-l-font-style);
+    font-weight: var(--body-l-font-weight);
+    letter-spacing: var(--body-l-letter-spacing);
+    line-height: var(--body-l-line-height);
+    position: relative;
+    text-align: center;
+  }
+  
+  .ChargeTicket .buttons-group-2 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    justify-content: center;
+    position: relative;
+    width: 528px;
+  }
+  
+  .ChargeTicket.button-2 {
+    all: unset;
+    align-items: center;
+    background-color: var(--indigo-600);
+    border: 1px solid;
+    border-color: var(--indigo-500);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+  }
+  
+  .ChargeTicket .button-text-3 {
+    color: var(--white);
+    font-family: var(--button-l-font-family);
+    font-size: var(--button-l-font-size);
+    font-style: var(--button-l-font-style);
+    font-weight: var(--button-l-font-weight);
+    letter-spacing: var(--button-l-letter-spacing);
+    line-height: var(--button-l-line-height);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .ChargeTicket .button-3 {
+    all: unset;
+    align-items: center;
+    background-color: var(--blue-gray700);
+    border: 1px solid;
+    border-color: var(--blue-gray600);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+  }
+  
+  .ChargeTicket .shapes {
+    height: 284.14px;
+    position: relative;
+    width: 284.18px;
+  }
+  
+  .ChargeTicket .overlap-group-2 {
+    height: 284px;
+    position: relative;
+    width: 284px;
+  }
+  /* Estilos para el contenedor del formulario */
+.ChargeTicket .form-container {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Estilos para los campos del formulario */
+  .ChargeTicket .form-container input,
+  .ChargeTicket .form-container select {
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye padding en el tamaño del campo */
+    padding: 10px; /* Espaciado interno */
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-bottom: 15px; /* Espaciado entre los campos */
+  }
+  
+  /* Estilos para las etiquetas de los campos del formulario */
+  .ChargeTicket .form-container label {
+    display: block; /* Hace que la etiqueta ocupe una línea completa */
+    margin-bottom: 5px; /* Espaciado debajo de la etiqueta */
+    color: #333; /* Color del texto de la etiqueta */
+    font-size: 14px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita para las etiquetas */
+  }
+  
+  /* Estilos para el botón de envío */
+  .ChargeTicket .form-container button {
+    background-color: #007bff; /* Color de fondo azul */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    color: #fff; /* Color del texto blanco */
+    cursor: pointer; /* Cursor de mano para indicar que es clickeable */
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 12px; /* Espaciado interno */
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+  }
+  
+  /* Efecto hover para el botón de envío */
+  .ChargeTicket .form-container button:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el ratón */
+  }
+/* Estilos para el título del formulario */
+.ChargeTicket .form-container h2 {
+    font-family: 'Arial', sans-serif; /* O cambia por otra tipografía según tus necesidades */
+    font-size: 24px; /* Tamaño del texto para hacerlo más grande */
+    font-weight: bold; /* Negrita para destacar el título */
+    color: #333; /* Color del texto para que sea legible */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    margin-bottom: 20px; /* Espacio debajo del título */
+  }
+
+  /* Estilos para el contenedor de usuario */
+.ChargeTicket .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre la foto y el nombre */
+    margin-left: auto; /* Alinea al lado derecho del contenedor */
+  }
+  
+  .ChargeTicket .user-photo {
+    width: 40px; /* Tamaño de la foto */
+    height: 40px; /* Tamaño de la foto */
+    border-radius: 50%; /* Hace la foto redonda */
+    object-fit: cover; /* Ajusta la imagen para que no se deforme */
+  }
+  
+  .ChargeTicket .user-name {
+    color: var(--white); /* Color del texto, cambia según el diseño */
+    font-family: var(--body-l-font-family); /* Fuente del nombre */
+    font-size: 16px; /* Tamaño de la fuente del nombre */
+    font-weight: bold; /* Negrita para destacar el nombre */
+  }
+  
