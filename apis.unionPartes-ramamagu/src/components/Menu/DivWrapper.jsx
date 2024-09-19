@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowChevronDown } from "../../icons/ArrowChevronDown";
+import { Card, CardContent, Button } from '@mui/material'; // Asegúrate de que estas importaciones sean correctas para tu caso
 import "./style.css";
 
 export const DivWrapper = () => {
@@ -109,15 +110,13 @@ export const DivWrapper = () => {
               </div>
 
             </div>
-            <button className="button-2">
-              <div className="view-report-wrapper">
-                <div className="text-wrapper-7">Reporte</div>
-              </div>
-          
-            </button>
-            <div className="title-data">Gastado</div>
-            <div className="text-wrapper-8">ARS 150.000</div>
-            <p className="p">desde 1-12 Dec, 2020</p>
+            <div className="card-container">
+               <div className="title-data">Gastado</div>
+               <div className="amount-text">ARS 150.000</div>
+              <p className="date-range">desde 1-12 Dec, 2020</p>
+              <button className="report-button">Reporte</button>
+            </div>
+
 
           {/* <div class="Gastado">
   <span class="titulo">Gastado</span>
