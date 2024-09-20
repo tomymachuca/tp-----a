@@ -1,982 +1,153 @@
-.div-wrapper {
+/* Estilos generales para toda la aplicación */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
   background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  flex-wrap: wrap; /* Esto permite que el contenido se ajuste en pantallas pequeñas */
+  color: #333;
 }
 
-/* Sección Gastado */
-.Gastado {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 20px;
-  width: 100%; /* Asegura que tome el 100% del ancho en pantallas pequeñas */
+/* Configuración de box-sizing para que el padding y borde se incluyan en el tamaño de los elementos */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.titulo {
-  font-family: 'Poppins', sans-serif;
-  font-size: 44px;
-  font-weight: 600;
-  color: #333333;
-  margin-bottom: 10px;
-}
-
-.monto {
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  color: #1F384C;
-  margin-bottom: 5px;
-}
-
-.fecha {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #888888;
-}
-
-/* Responsive */
+/* Añadir algunos estilos globales de responsividad */
 @media (max-width: 768px) {
-  .div-wrapper {
-    flex-direction: column;
-  }
-
-  .Gastado {
-    padding-left: 10px;
-  }
-
-  .titulo {
-    font-size: 32px;
-  }
-
-  .monto {
-    font-size: 18px;
-  }
-
-  .fecha {
+  body {
     font-size: 14px;
   }
-
-  .div-wrapper .overlap-wrapper {
-    width: 100%;
-    height: auto;
-  }
-
-  .div-wrapper .overlap-group,
-  .div-wrapper .separator,
-  .div-wrapper .img,
-  .div-wrapper .most-ordered,
-  .div-wrapper .most-ordered1,
-  .div-wrapper .revenue,
-  .div-wrapper .rating,
-  .div-wrapper .chart {
-    width: 100%;
-    left: 0;
-    top: auto;
-    position: relative;
-  }
-
-  .div-wrapper .separator-2 {
-    width: 100%;
-  }
-
-  .div-wrapper .group-4,
-  .div-wrapper .group-5,
-  .div-wrapper .group-6,
-  .div-wrapper .group-7,
-  .div-wrapper .group-8,
-  .div-wrapper .group-9,
-  .div-wrapper .group-10,
-  .div-wrapper .group-11,
-  .div-wrapper .group-12 {
-    width: 100%;
-    left: 0;
-    top: auto;
-    position: relative;
-  }
-}
-
-.div-wrapper .overlap-wrapper {
-  background-color: #ffffff;
-  height: 960px;
-  width: 1440px;
-}
-
-.div-wrapper .overlap {
-  height: 953px;
-  position: relative;
-}
-
-.div-wrapper .overlap-group {
-  height: 724px;
-  left: 280px;
-  position: absolute;
-  top: 167px;
-  width: 1120px;
-}
-
-.div-wrapper .separator {
-  height: 724px;
-  left: 718px;
-  position: absolute;
-  top: 0;
-  width: 1px;
-}
-
-.div-wrapper .img {
-  height: 362px;
-  left: 359px;
-  position: absolute;
-  top: 362px;
-  width: 1px;
-}
-
-.div-wrapper .separator-2 {
-  height: 1px;
-  left: 0;
-  position: absolute;
-  top: 362px;
-  width: 1120px;
-}
-
-.div-wrapper .overlap-group-2 {
-  background-image: url(../../../static/img/rectangle-25.svg);
-  background-size: 100% 100%;
-  height: 35px;
-  left: -1px;
-  position: relative;
-}
-
-.div-wrapper .text-wrapper-7 {
-  color: #5969cf;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 500;
-  left: 17px;
-  letter-spacing: 0.5px;
-  line-height: 20px;
-  position: absolute;
-  top: 6px;
-  white-space: nowrap;
-}
-
-.div-wrapper .title-data {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 14px;
-  font-weight: 400;
-  left: 0;
-  letter-spacing: 0.5px;
-  line-height: 22px;
-  position: absolute;
-  top: 0;
-  white-space: nowrap;
-}
-
-.div-wrapper .text-wrapper-8 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 500;
-  left: 0;
-  letter-spacing: 0.5px;
-  line-height: 28px;
-  position: absolute;
-  top: 30px;
-  white-space: nowrap;
-}
-
-.div-wrapper .p {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 13px;
-  font-weight: 400;
-  left: 450px;
-  letter-spacing: 0.5px;
-  line-height: 21px;
-  opacity: 0.5;
-  position: absolute;
-  top: 104px;
-  white-space: nowrap;
-}
-
-.div-wrapper .ellipse-2 {
-  background-color: #d8d9da;
-  border-radius: 4.5px;
-  height: 9px;
-  left: 0;
-  position: absolute;
-  top: 2px;
-  width: 9px;
-}
-
-.div-wrapper .most-ordered {
-  height: 310px;
-  left: 678px;
-  position: absolute;
-  top: 569px;
-  width: 316px;
-}
-
-.div-wrapper .most-ordered1 {
-  height: 310px;
-  left: 1050px;
-  position: absolute;
-  top: 569px;
-  width: 316px;
-}
-
-.div-wrapper .desc {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  left: 0;
-  letter-spacing: 0.5px;
-  line-height: 22px;
-  opacity: 0.5;
-  position: absolute;
-  top: 30px;
-  width: 312px;
-}
-
-.div-wrapper .group-4 {
-  height: 44px;
-  left: 0;
-  position: absolute;
-  top: 102px;
-  width: 284px;
-}
-
-.div-wrapper .line-7 {
-  height: 1px;
-  left: 0;
-  position: absolute;
-  top: 44px;
-  width: 280px;
-}
-
-.div-wrapper .group-5 {
-  height: 28px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 288px;
-}
-
-.div-wrapper .group-6 {
-  background-color: #c4c4c4;
-  background-image: url(../../../static/img/group-245.png);
-  background-size: 100% 100%;
-  border-radius: 14px;
-  box-shadow: 0px 10px 20px #40485259;
-  height: 28px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 28px;
-}
-
-.div-wrapper .text {
-  color: #273240;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  left: 48px;
-  letter-spacing: 0.5px;
-  line-height: 20px;
-  position: absolute;
-  top: 4px;
-  white-space: nowrap;
-}
-
-.div-wrapper .text-2 {
-  color: #273240;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  left: 213px;
-  letter-spacing: 0.5px;
-  line-height: 20px;
-  opacity: 0.7;
-  position: absolute;
-  top: 4px;
-  white-space: nowrap;
-}
-
-.div-wrapper .group-7 {
-  height: 44px;
-  left: 0;
-  position: absolute;
-  top: 162px;
-  width: 296px;
-}
-
-.div-wrapper .group-8 {
-  background-color: #c4c4c4;
-  background-image: url(../../../static/img/group-23.png);
-  background-size: 100% 100%;
-  border-radius: 14px;
-  box-shadow: 0px 10px 20px #40485259;
-  height: 28px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 28px;
-}
-
-.div-wrapper .group-9 {
-  height: 44px;
-  left: 0;
-  position: absolute;
-  top: 222px;
-  width: 287px;
-}
-
-.div-wrapper .group-10 {
-  background-color: #c4c4c4;
-  background-image: url(../../../static/img/group-23-1.png);
-  background-size: 100% 100%;
-  border-radius: 14px;
-  box-shadow: 0px 10px 20px #40485259;
-  height: 28px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 28px;
-}
-
-.div-wrapper .group-11 {
-  height: 28px;
-  left: 0;
-  position: absolute;
-  top: 282px;
-  width: 288px;
-}
-
-.div-wrapper .group-12 {
-  background-color: #c4c4c4;
-  background-image: url(../../../static/img/group-23-2.png);
-  background-size: 100% 100%;
-  border-radius: 14px;
-  box-shadow: 0px 10px 20px #40485259;
-  height: 28px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 28px;
-}
-
-.div-wrapper .rating {
-  height: 321px;
-  left: 280px;
-  position: absolute;
-  top: 569px;
-  width: 317px;
-}
-
-.div-wrapper .overlap-2 {
-  height: 241px;
-  left: 9px;
-  position: absolute;
-  top: 80px;
-  width: 308px;
-}
-
-.div-wrapper .chart {
-  height: 179px;
-  left: 130px;
-  position: absolute;
-  top: 20px;
-  width: 178px;
-}
-
-.div-wrapper .overlap-group-3 {
-  height: 181px;
-  position: relative;
-  top: -1px;
-  width: 175px;
-}
-
-.div-wrapper .ellipse-3 {
-  background-color: #f89c2f;
-  border-radius: 84.36px;
-  height: 169px;
-  left: 0;
-  opacity: 0.9;
-  position: absolute;
-  top: 6px;
-  width: 169px;
-}
-
-.div-wrapper .text-3 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 33.7px;
-  font-weight: 400;
-  left: 50px;
-  letter-spacing: 0.53px;
-  line-height: 33.7px;
-  position: absolute;
-  top: 63px;
-  white-space: nowrap;
-  width: 70px;
-}
-
-.div-wrapper .text-4 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12.7px;
-  font-weight: 400;
-  left: 47px;
-  letter-spacing: 0.53px;
-  line-height: 12.7px;
-  position: absolute;
-  top: 105px;
-  white-space: nowrap;
-  width: 74px;
-}
-
-.div-wrapper .ellipse-4 {
-  height: 181px;
-  left: 5px;
-  position: absolute;
-  top: 0;
-  width: 170px;
-}
-
-.div-wrapper .overlap-group-wrapper {
-  height: 110px;
-  left: 49px;
-  position: absolute;
-  top: 0;
-  width: 111px;
-}
-
-.div-wrapper .overlap-3 {
-  height: 112px;
-  position: relative;
-  top: -1px;
-  width: 108px;
-}
-
-.div-wrapper .ellipse-5 {
-  background-color: #6463d6;
-  border-radius: 51.88px;
-  height: 104px;
-  left: 0;
-  opacity: 0.8;
-  position: absolute;
-  top: 4px;
-  width: 104px;
-}
-
-.div-wrapper .text-5 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 20.8px;
-  font-weight: 400;
-  left: 30px;
-  letter-spacing: 0.32px;
-  line-height: 20.8px;
-  position: absolute;
-  top: 38px;
-  white-space: nowrap;
-  width: 43px;
-}
-
-.div-wrapper .text-6 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  left: 26px;
-  letter-spacing: 0.32px;
-  line-height: 7.8px;
-  position: absolute;
-  top: 67px;
-  white-space: nowrap;
-}
-
-.div-wrapper .ellipse-6 {
-  height: 112px;
-  left: 3px;
-  position: absolute;
-  top: 0;
-  width: 105px;
-}
-
-.div-wrapper .chart-2 {
-  height: 130px;
-  left: 0;
-  position: absolute;
-  top: 111px;
-  width: 130px;
-}
-
-.div-wrapper .overlap-4 {
-  height: 132px;
-  position: relative;
-  top: -1px;
-  width: 127px;
-}
-
-.div-wrapper .ellipse-7 {
-  background-color: #2fbede;
-  border-radius: 61.18px;
-  height: 122px;
-  left: 0;
-  opacity: 0.9;
-  position: absolute;
-  top: 5px;
-  width: 122px;
-}
-
-.div-wrapper .text-7 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 37px;
-  letter-spacing: 0.38px;
-  line-height: 24px;
-  position: absolute;
-  top: 44px;
-  white-space: nowrap;
-}
-
-.div-wrapper .text-8 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  left: 28px;
-  letter-spacing: 0.38px;
-  line-height: 12px;
-  position: absolute;
-  top: 76px;
-  white-space: nowrap;
-}
-
-.div-wrapper .revenue {
-  height: 322px;
-  left: 280px;
-  position: absolute;
-  top: 167px;
-  width: 684px;
-}
-
-.div-wrapper .button-2 {
-  all: unset;
-  box-sizing: border-box;
-  height: 32px;
-  left: 569px;
-  position: absolute;
-  top: 0;
-  width: 111px;
-}
-
-.div-wrapper .view-report-wrapper {
-  background-image: url(../../../static/img/rectangle-25-2.svg);
-  background-size: 100% 100%;
-  height: 35px;
-  left: 500px;
-  position: relative;
-}
-
-.div-wrapper .title-page {
-  color: #1f384c;
-  font-family: "Poppins", Helvetica;
-  font-size: 24px; /* Aumenté el tamaño de la fuente */
-  font-weight: 500;
-  left: 55%; /* Centra horizontalmente */
-  transform: translateX(-50%); /* Ajusta la posición para centrar */
-  letter-spacing: 0.5px;
-  line-height: 30px; /* Aumenté el line-height para acomodar el nuevo tamaño */
-  position: absolute;
-  top: 20px;
-  white-space: nowrap;
-}
-
-.div-wrapper .account-info {
-  height: 32px;
-  left: 1183px;
-  position: absolute;
-  top: 16px;
-  width: 222px;
-}
-
-.div-wrapper .emoticon-wrapper {
-  background-color: #ffe6cc;
-  border-radius: 16px;
-  height: 32px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 32px;
-}
-
-.div-wrapper .emoticon {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  left: 8px;
-  letter-spacing: 0.5px;
-  line-height: 13px;
-  position: absolute;
-  top: 9px;
-  white-space: nowrap;
-}
-
-.div-wrapper .merchant-name {
-  color: #1f384c;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  left: 44px;
-  letter-spacing: 0.5px;
-  line-height: 13px;
-  position: absolute;
-  top: 10px;
-  white-space: nowrap;
-}
-
-.div-wrapper .arrow-chevron-down {
-  height: 20px !important;
-  left: 152px !important;
-  position: absolute !important;
-  top: 8px !important;
-  width: 20px !important;
-}
-
-.div-wrapper .overlap-8 {
-  height: 18px;
-  left: 204px;
-  position: absolute;
-  top: 6px;
-  width: 15px;
-}
-
-.div-wrapper .notif-icon {
-  height: 16px;
-  left: 0;
-  position: absolute;
-  top: 2px;
-  width: 13px;
-}
-
-.div-wrapper .overlap-10 {
-  height: 953px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1440px;
-}
-
-.div-wrapper .sidebar {
-  background-color: #f1f2f7;
-  height: 960px;
-  left: -40px;
-  position: absolute;
-  top: 0;
-  width: 240px;
-}
-
-.div-wrapper .menu {
-  height: 352px;
-  left: 17px;
-  position: absolute;
-  top: 104px;
-  width: 204px;
-}
-
-.div-wrapper .dashboard-wrapper {
-  background-image: url(../../../static/img/active-background.svg);
-  background-size: 100% 100%;
-  height: 42px;
-  left: 0;
-  position: absolute;
-  top: 23px;
-  width: 200px;
-}
-
-.div-wrapper .dashboard {
-  height: 18px;
-  left: 20px;
-  position: relative;
-  top: 12px;
-  width: 68px;
-}
-
-.div-wrapper .dashboard-2 {
-  color: #5969cf;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 500;
-  left: 30px;
-  letter-spacing: 0.5px;
-  line-height: 12px;
-  position: absolute;
-  top: 3px;
-  white-space: nowrap;
-}
-
-.div-wrapper .img-2 {
-  height: 18px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 18px;
-}
-
-.div-wrapper .help {
-  height: 18px;
-  left: 19px;
-  opacity: 0.6;
-  position: absolute;
-  top: 334px;
-  width: 78px;
-}
-
-.div-wrapper .help-2 {
-  color: #273240;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  left: 35px;
-  letter-spacing: 0.5px;
-  line-height: 12px;
-  position: absolute;
-  top: 2px;
-  white-space: nowrap;
-}
-
-.div-wrapper .accounts {
-  height: 18px;
-  left: 17px;
-  opacity: 0.6;
-  position: absolute;
-  top: 294px;
-  width: 80px;
-}
-
-.div-wrapper .text-wrapper-22 {
-  color: #273240;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  left: 30px;
-  letter-spacing: 0.5px;
-  line-height: 12px;
-  position: absolute;
-  top: 3px;
-  white-space: nowrap;
-}
-
-.div-wrapper .settings {
-  height: 18px;
-  left: 20px;
-  opacity: 0.6;
-  position: absolute;
-  top: 254px;
-  width: 139px;
-}
-
-.div-wrapper .text-wrapper-23 {
-  color: #082431;
-  font-family: "Poppins", Helvetica;
-  font-size: 11px;
-  font-weight: 400;
-  left: 20px;
-  letter-spacing: 1px;
-  line-height: 11px;
-  opacity: 0.5;
-  position: absolute;
-  top: 219px;
-  white-space: nowrap;
-}
-
-.div-wrapper .review {
-  height: 18px;
-  left: 20px;
-  opacity: 0.6;
-  position: absolute;
-  top: 159px;
-  width: 115px;
-}
-
-.div-wrapper .customer-review {
-  color: #273240;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  left: 29px;
-  letter-spacing: 0.5px;
-  line-height: 12px;
-  position: absolute;
-  top: 3px;
-  white-space: nowrap;
-}
-
-.div-wrapper .manage {
-  height: 18px;
-  left: 20px;
-  opacity: 0.6;
-  position: absolute;
-  top: 119px;
-  width: 73px;
-}
-
-.div-wrapper .order {
-  height: 18px;
-  left: 20px;
-  opacity: 0.6;
-  position: absolute;
-  top: 77px;
-  width: 114px;
-}
-
-.div-wrapper .text-wrapper-24 {
-  color: #082431;
-  font-family: "Poppins", Helvetica;
-  font-size: 11px;
-  font-weight: 400;
-  left: 20px;
-  letter-spacing: 1px;
-  line-height: 11px;
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  white-space: nowrap;
 }
 
-.div-wrapper .logo {
-  height: 24px;
-  left: 37px;
-  position: absolute;
-  top: 20px;
-  width: 101px;
+/* Añadir alguna clase global para margen o padding */
+.margin-auto {
+  margin: 0 auto;
 }
 
-.div-wrapper .logo-2 {
-  height: 24px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 26px;
+/* Estilos para las divisiones finas y negras */
+.div-wrapper {
+  border-bottom: 1px solid #000;  /* Línea divisoria inferior */
 }
 
-.div-wrapper .c-wrapper {
-  background-color: #5a67ba;
-  border-radius: 13px;
-  height: 26px;
-  left: -1px;
-  position: relative;
-  top: -1px;
+.sidebar {
+  border-right: 1px solid #000;  /* Línea divisoria a la derecha de la barra lateral */
 }
 
-.div-wrapper .c {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 11px;
-  font-weight: 700;
-  left: 9px;
-  letter-spacing: 0;
-  line-height: 11px;
-  position: absolute;
-  top: 8px;
-  white-space: nowrap;
-}
-
-.div-wrapper .name {
-  color: #5a67ba;
-  font-family: "Poppins", Helvetica;
-  font-size: 11px;
-  font-weight: 700;
-  left: 32px;
-  letter-spacing: 0.5px;
-  line-height: 11px;
-  position: absolute;
-  top: 6px;
-  white-space: nowrap;
-}
-
-.div-wrapper .separator-3 {
-  height: 1px;
-  left: 0;
-  position: absolute;
-  top: 64px;
-  width: 1440px;
-}
 .card-container {
-  background-color: #f8f9fa; /* Fondo gris claro */
-  border-radius: 10px;
-  padding: 40px;
-  text-align: center;
-  width: 150%; /* Ocupar más del ancho de la pantalla */
-  max-width: 1500px; /* Limitar el tamaño máximo en pantallas grandes */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
-  margin-left: 50px; /* Ajusta este valor para moverla más a la derecha */
+  border: 1px solid #000;  /* Borde fino alrededor de la tarjeta */
 }
 
-
-
-.title-data {
-  font-size: 150px; /* Tamaño del título */
-  color: #4b4b4b;
-  text-align: center; /* Centrar el texto */
-  margin-bottom: 80px; /* Espaciado debajo del título */
-  width: 90%;
-
+.Gastado {
+  border-bottom: 1px solid #000;  /* Línea divisoria debajo de la sección de gastos */
 }
 
-.gastado-title {
-  font-size: 40px; /* Ajusta el tamaño para que parezca un título */
-  font-family: 'Poppins', sans-serif; /* O la fuente que prefieras */
-  color: #4b4b4b; /* Color del texto */
-  text-align: center; /* Centra el texto horizontalmente */
+.most-ordered-container > div {
+  border-right: 1px solid #000;  /* Línea divisoria entre las tarjetas "most-ordered" */
+}
+
+.most-ordered-container > div:last-child {
+  border-right: none;  /* Elimina la línea divisoria del último elemento */
+}
+
+/* Línea divisoria para la tabla de grupos */
+table {
+  border-collapse: collapse;
+}
+
+table td, table th {
+  border: 1px solid #000;
+}
+
+/* Líneas divisorias para las secciones "Por pagar" y "Por Cobrar" */
+.por-pagar, .por-cobrar {
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+
+/* Línea divisoria entre elementos de lista */
+.por-pagar ul, .por-cobrar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.por-pagar li, .por-cobrar li {
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+}
+
+.por-pagar li:last-child, .por-cobrar li:last-child {
+  border-bottom: none;
+}
+
+/* Ajuste para la línea del gráfico */
+.chart-line {
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+/* Nuevas líneas divisorias para la sección del medio */
+.middle-section {
+  border: 1px solid #000;  /* Borde alrededor de toda la sección del medio */
+}
+
+.middle-section > div {
+  border-bottom: 1px solid #000;  /* Línea divisoria entre subsecciones */
+}
+
+.middle-section > div:last-child {
+  border-bottom: none;  /* Elimina la línea divisoria de la última subsección */
+}
+
+.middle-section .subsection {
+  border-right: 1px solid #000;  /* Línea divisoria vertical entre elementos dentro de una subsección */
+}
+
+.middle-section .subsection:last-child {
+  border-right: none;  /* Elimina la línea divisoria del último elemento en una subsección */
+}
+
+/* Líneas divisorias para elementos dentro de las subsecciones */
+.middle-section .item {
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+}
+
+.middle-section .item:last-child {
+  border-bottom: none;
+}
+/* ... (estilos anteriores permanecen iguales) ... */
+
+/* Líneas divisorias para las secciones "Por pagar" y "Por Cobrar" */
+.por-pagar, .por-cobrar {
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Línea divisoria entre elementos de lista */
+.por-pagar ul, .por-cobrar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.por-pagar li, .por-cobrar li {
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+}
+
+.por-pagar li:last-child, .por-cobrar li:last-child {
+  border-bottom: none;
+}
+
+/* Estilo para el contenedor de "Por pagar" y "Por cobrar" */
+.pagar-cobrar-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  margin-bottom: 20px; /* Ajusta el margen inferior */
+  justify-content: space-between;
+  gap: 20px;
 }
 
-
-.amount-text {
-  font-size: 48px; /* Aumentamos el tamaño del monto */
-  font-weight: bold;
-  color: #2563eb;
-  margin: 20px 0;
+.pagar-cobrar-container > div {
+  flex: 1;
 }
 
-.date-range {
-  font-size: 18px;
-  color: #6c757d;
-  margin-bottom: 30px;
-}
-
-.report-button {
-  background-color: #0b0d17;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 20px 40px;
-  font-size: 18px;
-  cursor: pointer;
-  width: 100%; /* El botón ocupará el 100% del ancho del contenedor */
-  max-width: 700px; /* Puedes agregar un límite máximo si lo deseas */
-}
-
-.report-button:hover {
-  background-color: #1c1f2d;
-}
-
-
-
-
-
+/* ... (resto de los estilos permanecen iguales) ... */
